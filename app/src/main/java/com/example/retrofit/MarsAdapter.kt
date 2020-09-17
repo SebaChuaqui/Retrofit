@@ -9,10 +9,10 @@ import com.bumptech.glide.Glide
 import com.example.retrofit.model.Terrain
 import kotlinx.android.synthetic.main.mars_item_list.view.*
 
-class MarsAdapter(var mpassMars: Mars ) : RecyclerView.Adapter<MarsAdapter.TaskViewHolder>() { // Paso 4 //Implementar RecyclerView
+class MarsAdapter(var mpassMars: Mars) : RecyclerView.Adapter<MarsAdapter.TaskViewHolder>() { // Paso 4 //Implementar RecyclerView
 
     private var dataList = emptyList<Terrain>() // Paso 1
-    
+
 
     fun updateListMars(mDataList: List<Terrain>){ //Paso 2
 
