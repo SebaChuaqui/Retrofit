@@ -15,6 +15,11 @@ class Repository(private val terrainDao: TerrainDao) {
     private val service = RetrofitClient.getRetrofitClient()
     val mLiveData = terrainDao.getAllTerrainsFromDB()
 
+    fun returnLiveDataFromTerrain(mId: String) :LiveData<Terrain>{
+        return terrainDao.obtainDataFromDataBase(mId)
+
+    }
+
 
     // La vieja confiable
     fun getDataFromServer() {

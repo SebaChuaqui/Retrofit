@@ -15,4 +15,7 @@ interface TerrainDao {
     @Query("SELECT * FROM terrain_table")
     fun getAllTerrainsFromDB(): LiveData<List<Terrain>>
 
+    @Query("SELECT * FROM terrain_table Where id =:mId" )
+    fun obtainDataFromDataBase(mId: String): LiveData<Terrain>
+
 }

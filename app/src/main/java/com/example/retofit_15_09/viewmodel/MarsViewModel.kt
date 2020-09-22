@@ -18,6 +18,9 @@ class MarsViewModel(application: Application) : AndroidViewModel(application){
         repository.getDataFromServer()
     }
 
+    fun returnLiveDataFromTerrain(mId: String) :LiveData<Terrain>{
+        return repository.returnLiveDataFromTerrain(mId)
+    }
     fun exposeLiveDataFromDatabase(): LiveData<List<Terrain>> {
         return repository.mLiveData
     }
